@@ -15,7 +15,7 @@ namespace StaticPolymorphism
         {
             Employee employee = new Employee("Aryan", "Gupta", "Surat, Gujarat", 1234567890, "aryan.gupta@oneadvanced.com");
 
-            employee.display();
+            employee.Display();
             Console.ReadKey();
         }
     }
@@ -34,14 +34,12 @@ namespace StaticPolymorphism
             this.email = email; 
         }
 
-        public void display()
+        public void Display()
         {
             Console.WriteLine("Name: " + firstName + " " + lastName);
             Console.WriteLine("Home City: " + city);
             Console.WriteLine("Contact Number: " + mobileNumber);
             Console.WriteLine("Work Email: " + email);
         }
-
     }
-
 }
