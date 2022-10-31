@@ -13,33 +13,28 @@ namespace StaticPolymorphism
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee("Aryan", "Gupta", "Surat, Gujarat", 1234567890, "aryan.gupta@oneadvanced.com");
+            Employee employee = new Employee();
+            employee.EmployeeDetails("Aryan", "Gupta", "aryan.gupta@oneadvanced.com");
+            employee.EmployeeDetails("Aryan", "Gupta", "Surat, Gujarat", 1234567890, "aryan.gupta@oneadvanced.com");
 
-            employee.Display();
             Console.ReadKey();
         }
     }
 
     class Employee
-    {
-        string firstName, lastName, city, email;
-        int mobileNumber;
-
-        public Employee(string firstName, string lastName, string city, int mobileNumber, string email)
+    {                       
+        public void EmployeeDetails(string firstName, string lastName, string email)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.city = city;
-            this.mobileNumber = mobileNumber;
-            this.email = email; 
+            Console.WriteLine("\nFull Name: " + firstName + " " + lastName);
+            Console.WriteLine("Work Email: " + email);
         }
 
-        public void Display()
+        public void EmployeeDetails(string firstName, string lastName, string city, int mobileNumber, string email)
         {
-            Console.WriteLine("Name: " + firstName + " " + lastName);
+            Console.WriteLine("\n\nName: " + firstName + " " + lastName);
             Console.WriteLine("Home City: " + city);
             Console.WriteLine("Contact Number: " + mobileNumber);
             Console.WriteLine("Work Email: " + email);
-        }
+        }        
     }
 }
